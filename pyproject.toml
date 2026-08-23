@@ -7,7 +7,10 @@ authors = [
     { name = "duncan0223", email = "duncan0223@gmail.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "dotenv>=0.9.9",
+    "google-genai>=2.19.0",
+]
 
 [project.scripts]
 test-0823-a = "test_0823_a:main"
