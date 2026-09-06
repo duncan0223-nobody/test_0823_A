@@ -23,7 +23,7 @@ client = genai.Client(api_key=GEMINI_API_KEY)
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """歡迎訊息"""
     welcome_text = (
-        "👋 你好！我是串接 Google 最新 Gemini 3.7 Flash 的 Telegram AI 助理。\n\n"
+        "👋 你好！我是串接 Google 最新 Gemini 3.5 Flash 的 Telegram AI 助理。\n\n"
         "你可以直接向我提問任何問題、請我寫程式、翻譯或總結文章！"
     )
     if update.message:
