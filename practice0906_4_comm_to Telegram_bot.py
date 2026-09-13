@@ -1,5 +1,5 @@
 """
-Telegram + Gemini 3.7 Flash AI 智慧對話機器人
+Telegram + Gemini 3.5 Flash AI 智慧對話機器人
 使用 python-telegram-bot 與 Google GenAI SDK (Interactions API)
 """
 
@@ -23,7 +23,7 @@ client = genai.Client(api_key=GEMINI_API_KEY)
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """歡迎訊息"""
     welcome_text = (
-        "👋 你好！我是串接 Google 最新 Gemini 3.5 Flash 的 Telegram AI 助理。\n\n"
+        "👋 你好！我是串接 Google 最新 Gemini 3.7 Flash 的 Telegram AI 助理。\n\n"
         "你可以直接向我提問任何問題、請我寫程式、翻譯或總結文章！"
     )
     if update.message:
@@ -44,7 +44,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     try:
         # 使用 Interactions API 呼叫 Gemini 3.7 Flash
         interaction = client.interactions.create(
-            model="gemini-3.5-flash",
+            model="gemini-3.7-flash",
             input=user_query,
             system_instruction="你是一個繁體中文的 Telegram 智慧助理，請用繁體中文給出清晰、條理分明的回答。"
         )
