@@ -67,3 +67,4 @@ async def line_webhook(request: Request):
 if __name__ == "__main__":
     # 使用 port 8000 - 不需要 root 權限
     uvicorn.run(app, host="0.0.0.0", port=8000)
+    #line webhook 的連結.
